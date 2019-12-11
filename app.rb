@@ -7,7 +7,9 @@ class App < Sinatra::Base
   end
 
   post '/' do
-    text_from_user = params[:user_text]
+    @text = params[:user_text]
+    
+    #binding.pry
 
     erb :results
   end
